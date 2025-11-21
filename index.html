@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <header>
         <nav>
             <ul>
@@ -22,14 +23,33 @@
         <p>The web is for everyone.</p>
     </header>
 
-    <main>
-        <p>Welcome to the Universal Design educational resource.</p>
-        <p>Please explore the sections above to learn why universal design matters, what it is, and how to achieve it.
+    <main id="main-content">
+        <p>Welcome to Jace's Universal Design educational resource!</p>
+        <p>Please explore the sections above to learn what universal design is, why it's important, and how to achieve it.
         </p>
+
+        <section class="contact-section">
+            <h2>Follow up with questions</h2>
+            <form id="contact-form" onsubmit="alert('This would submit your inquiry'); return false;">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="inquiry">Inquiry:</label>
+                    <textarea id="inquiry" name="inquiry" rows="4" required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2025.</p>
+        <p>Jace Simons 2025</p>
     </footer>
 </body>
 

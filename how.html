@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <header>
         <nav>
             <ul>
@@ -20,34 +21,45 @@
         </nav>
     </header>
 
-    <main>
+    <main id="main-content">
         <h2>How to achieve it</h2>
+        <p>Now that we know what Universal Design is and why it's important, let's look at how to achieve it!</p>
 
-        <div class="code-card">
-            <h3>1. Semantic HTML</h3>
-            <p>Use the right tag for the job. Buttons for actions, links for travel.</p>
-            <code>&lt;button&gt;Click me&lt;/button&gt;</code>
-        </div>
+        <div class="card-grid">
+            <div class="code-card">
+                <h3>1. Semantic HTML</h3>
+                <p>Use the right tag for the job. Buttons for actions, links for travel.</p>
+                <code>&lt;button&gt;Click me&lt;/button&gt;</code>
+                <p>Using modern semantic html tags makes it easier for screen readers and assistive tech to understand the
+                    content of a website.</p>
+            </div>
 
-        <div class="code-card">
-            <h3>2. Responsive Layouts</h3>
-            <p>Design mobile-first. Let content flow naturally.</p>
-            <code>@media (min-width: 768px) { ... }</code>
-        </div>
+            <div class="code-card">
+                <h3>2. Responsive Layouts</h3>
+                <p>Design mobile-first. Let content flow naturally.</p>
+                <code>@media (min-width: 768px) { ... }</code>
+                <p>Responsive layouts ensure that your website works on all devices, from desktop to mobile. Do this by designing the website & content to be viewed on a phone primarily, so that extra space available on the desktop becomes a bonus to fit more information.</p>
+            </div>
 
-        <div class="code-card">
-            <h3>3. Color & Contrast</h3>
-            <p>Ensure text is readable for everyone.</p>
-        </div>
+            <div class="code-card">
+                <h3>3. Color & Contrast</h3>
+                <p>Ensure text is readable for everyone. People with color blindness or partial blindness have a hard time reading not-well-contrasting words on the screen. If the background is dark and the text is too, it makes it unreadable to a lot of people. Do this by using good contrast between background and text, and making sure the font is readable improve the experience for everyone.</p>
+            </div>
 
-        <div class="code-card">
-            <h3>4. Keyboard Nav</h3>
-            <p>If you can't use it with a keyboard, you can't use it.</p>
+            <div class="code-card">
+                <h3>4. Keyboard Nav</h3>
+                <p>A lot of people use the keyboard to navigate web pages, by pressing tab to jump around and enter to select things. If your website is not keyboard-navigable, it will be hard for people to use it. To make it keyboard navigable, use semantic html tags and make sure that all interactive elements are accessible via the keyboard.</p>
+            </div>
+
+            <div class="code-card">
+                <h3>5. Screen Reader Support</h3>
+                <p>Screen readers are a tool that help people with visual impairments navigate the web. They read out loud the content of a website, and it's important to make sure that it's easy for screen readers to understand the content of a website, via ARIA tags and proper semantic html strucutre..</p>
+            </div>
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2025.</p>
+        <p>Jace Simons 2025</p>
     </footer>
 </body>
 

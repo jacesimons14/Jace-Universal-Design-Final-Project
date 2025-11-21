@@ -1,10 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap');
+
 body {
-    font-family: sans-serif;
-    max-width: 800px;
+    font-family: "Host Grotesk", sans-serif;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
     line-height: 1.6;
     color: #333;
+}
+
+/* Skip Link */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 0;
 }
 
 nav ul {
@@ -13,11 +31,14 @@ nav ul {
     margin-bottom: 40px;
     border-bottom: 1px solid #ccc;
     padding-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 nav ul li {
     display: inline;
-    margin-right: 20px;
+    margin: 0;
 }
 
 a {
@@ -37,8 +58,121 @@ code {
     border-radius: 3px;
 }
 
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
 .code-card {
     border: 1px solid #ddd;
     padding: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 0; /* Remove bottom margin as grid handles gap */
+    border-radius: 8px;
+    height: 100%; /* Make cards equal height */
+    box-sizing: border-box;
+}
+
+/* Form Styles */
+.contact-section {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+button {
+    background-color: #0056b3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #004494;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Responsive Table */
+@media (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+    
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    
+    tr { border: 1px solid #ccc; margin-bottom: 10px; }
+    
+    td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+    }
+    
+    td:before {
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+    }
+    
+    /* Label the data */
+    td:nth-of-type(1):before { content: "Feature"; }
+    td:nth-of-type(2):before { content: "Traditional Design"; }
+    td:nth-of-type(3):before { content: "Universal Design"; }
 }
